@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    int num1=0,num2=0,num3=2,num4,countMe=1,option=0,counter=1,numLines=250;
+    int num1=0,num2=0,num3=2,num4,countMefactor=0,countMemultiple=0,option=0,counter=1,numLines=250;
 
     bool isYes=true,isCorrect=true;
 
@@ -61,7 +61,6 @@ int main()
 
         ///Factor Finder
         isYes=true,isCorrect=true;
-        num1=0,num2=1,countMe=1;
 
         //CELEBRATIONS!
         cout << "\n\n\t\t\t\t\tOFF WE GO TO Factor Finder THEN!YIPEE!\n\n\n\t";
@@ -72,6 +71,10 @@ int main()
 
         do
         {
+            //Redeclaration
+            num1=0,num2=1;
+            countMefactor++;
+
             //Only DEVELOPERS
             counter++;
 
@@ -124,7 +127,6 @@ int main()
             //If you do, screen clears and "Factor Finder" restarts.
             if(num3==1)
             {
-                countMe++;
                 isYes=true;
                 system("pause");
                 system("cls");
@@ -133,7 +135,7 @@ int main()
             //Only DEVELOPERS!
             else if (num3==numLines)
             {
-                printf("\n\n\t\tNo. of times this application was used: %d\n\n\t",countMe);
+                printf("\n\n\t\tNo. of times this application was used: %d\n\n\t",countMefactor);
                 system("pause");
                 system("cls");
                 isYes=false;
@@ -160,7 +162,8 @@ int main()
         system("cls");
         do
         {
-            num1=0,num2=0,num3=2,countMe=1;
+            countMemultiple++;
+            num1=0,num2=0,num3=2;
 
             //Only DEVELOPERS
             counter++;
@@ -197,7 +200,6 @@ int main()
             //If you do, screen clears and "Multiples Finder" restarts.
             if(num4==1)
             {
-                countMe++;
                 isYes=true;
                 system("pause");
                 system("cls");
@@ -206,7 +208,7 @@ int main()
             //Only DEVELOPERS!
             else if (num4==numLines)
             {
-                printf("\n\n\t\tNo. of times this application was used: %d\n\n\t",countMe);
+                printf("\n\n\t\tNo. of times this application was used: %d\n\n\t",countMemultiple);
                 system("pause");
                 system("cls");
                 isYes=false;
@@ -245,5 +247,5 @@ int main()
         break;
     }
     }while (isCorrect!=false);
-    return numLines;
+    return 0;
 }
